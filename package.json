@@ -1,0 +1,64 @@
+{
+  "name": "ask-sdk-dynamodb-persistence-adapter",
+  "version": "3.0.0",
+  "description": "DynamoDB based implementation package of PersistenceAdapter interface in ASK SDK v2 for Node.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && npm run lint",
+    "compile": "tsc",
+    "test": "cross-env TS_NODE_FILES=true mocha -r ts-node/register \"./tst/**/*.spec.ts\"",
+    "lint": "eslint \"lib/**/*.{ts,tsx}\" \"tst/**/*.{ts,tsx}\"",
+    "clean": "rm -rf ./dist",
+    "reinstall": "rm -rf ./node_modules && npm install"
+  },
+  "author": "Amazon.com",
+  "contributors": [
+    {
+      "name": "Tianren Zhang",
+      "email": "tianrenz@amazon.com"
+    },
+    {
+      "name": "Tiantian Xie",
+      "email": "xtiantia@amazon.com"
+    },
+    {
+      "name": "Codjo Quenum",
+      "email": "cquenum@users.noreply.github.com"
+    }
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "Alexa",
+    "SDK"
+  ],
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.74.0",
+    "@aws-sdk/lib-dynamodb": "^3.74.0"
+  },
+  "peerDependencies": {
+    "ask-sdk-core": "^2.12.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.1",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^17.0.25",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "ask-sdk-core": "^2.12.1",
+    "ask-sdk-model": "^1.38.1",
+    "aws-sdk-client-mock": "^0.6.2",
+    "aws-sdk-mock": "^5.6.2",
+    "chai": "^4.3.6",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.13.0",
+    "eslint-plugin-tsdoc": "^0.2.16",
+    "mocha": "^9.2.2",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  },
+  "repository": "github:cquenum/alexa-skills-kit-sdk-for-nodejs",
+  "bugs": "https://github.com/cquenum/alexa-skill-sdk-for-nodejs/issues",
+  "homepage": "https://github.com/cquenum/alexa-skill-sdk-for-nodejs#readme"
+}
