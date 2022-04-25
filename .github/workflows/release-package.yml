@@ -11,14 +11,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 12
-          cache: 'npm'
-          cache-dependency-path: '**/package-lock.json'
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 12
+        # cache: 'npm'  
+        # cache-dependency-path: '**/package-lock.json'
       
-      - name: Cache node modules
+    - name: Cache node modules
       uses: actions/cache@v3
       env:
         cache-name: cache-node-modules
@@ -31,9 +31,9 @@ jobs:
           ${{ runner.os }}-build-
           ${{ runner.os }}-
    
-      - run: npm install
-      - run: npm ci
-      - run: npm test
+    - run: npm install
+    - run: npm ci
+    - run: npm test
 
   publish-gpr:
     needs: build
