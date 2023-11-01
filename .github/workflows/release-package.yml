@@ -61,6 +61,8 @@ jobs:
             ${{ runner.os }}-
       - run: npm install
       - run: npm ci
+      - name: Configure npm
+        run: npm config set '//npm.pkg.github.com/:_authToken' "${NODE_AUTH_TOKEN}"
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
