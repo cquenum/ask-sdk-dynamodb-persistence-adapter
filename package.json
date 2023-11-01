@@ -1,6 +1,6 @@
 {
   "name": "@ojdoc/ask-sdk-dynamodb-persistence-adapter",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "DynamoDB based implementation package of PersistenceAdapter interface in ASK SDK v2 for Node.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
